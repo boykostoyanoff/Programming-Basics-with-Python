@@ -11,4 +11,5 @@ for i in range(len(first_string)):
         else:
             break
     else:
+
         print()
