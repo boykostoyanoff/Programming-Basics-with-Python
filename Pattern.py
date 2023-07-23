@@ -1,4 +1,5 @@
 n = int(input())
+
 pattern = '*'
 
 for row in range(1, n + 1):
