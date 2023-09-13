@@ -14,9 +14,9 @@ while not data == 'End':
 
     data = input()
 
-company_users = dict(sorted(company_users.items(), key=lambda x: -len(x[1])))
+company_users = sorted(company_users.items(), key=lambda x: x[0], reverse=True)
 
-for c, users in company_users.items():
+for c, users in company_users:
     print(c)
     for u in users:
         print(f'-- {u}')
