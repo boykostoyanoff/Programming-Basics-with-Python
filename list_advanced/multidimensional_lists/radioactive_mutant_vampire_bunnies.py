@@ -3,8 +3,8 @@ rows, cols = [int(n) for n in input().split(' ')]
 lair = list()
 start_x = None
 start_y = None
+message = None
 is_dead = False
-message = ' '
 
 for r in range(rows):
     row_string = input()
@@ -40,6 +40,8 @@ for i in range(len(moves)):
         lair[start_x][start_y] = '.'
         start_x = next_x
         start_y = next_y
+        if lair[start_x][start_y] == 'B':
+            message = f"dead: {start_x} {start_y}"
     else:
         message = f'won: {start_x} {start_y}'
         lair[start_x][start_y] = '.'
@@ -55,14 +57,14 @@ for i in range(len(moves)):
                     bunnies_location.append((r, c - 1))
                 if is_valid_move(r, c + 1):
                     bunnies_location.append((r, c + 1))
+
     for r, c in bunnies_location:
         lair[r][c] = 'B'
 
-    if lair[start_x][start_y] == 'B':
+    if lair[start_x][start_y] == 'B' and not message:
         message = f"dead: {start_x} {start_y}"
 
-
-    if message.split(':')[0] == "dead" or message.split(':')[0] == "won":
+    if message:
         break
 
 for r in range(rows):
