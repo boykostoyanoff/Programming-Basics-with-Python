@@ -1,7 +1,7 @@
 # test zero
 import unittest
 
-from project.stack import Stack
+from try_stack.stack import Stack
 
 
 class StackTests(unittest.TestCase):
