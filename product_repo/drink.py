@@ -1,4 +1,4 @@
-from project.product import Product
+from product_repo.product import Product
 
 
 class Drink(Product):

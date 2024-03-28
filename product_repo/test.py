@@ -1,9 +1,9 @@
 import unittest
 
-from project.drink import Drink
-from project.food import Food
-from project.product import Product
-from project.product_repository import ProductRepository
+from product_repo.drink import Drink
+from product_repo.food import Food
+from product_repo.product import Product
+from product_repo.product_repository import ProductRepository
 
 
 class Tests(unittest.TestCase):
