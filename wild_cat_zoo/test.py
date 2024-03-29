@@ -1,12 +1,12 @@
-from zoo.worker import Worker
-from zoo.animal import Animal
-from zoo.lion import Lion
-from zoo.tiger import Tiger
-from zoo.cheetah import Cheetah
-from zoo.keeper import Keeper
-from zoo.vet import Vet
-from zoo.caretaker import Caretaker
-from zoo.zoo import Zoo
+from wild_cat_zoo.worker import Worker
+from wild_cat_zoo.animal import Animal
+from wild_cat_zoo.lion import Lion
+from wild_cat_zoo.tiger import Tiger
+from wild_cat_zoo.cheetah import Cheetah
+from wild_cat_zoo.keeper import Keeper
+from wild_cat_zoo.vet import Vet
+from wild_cat_zoo.caretaker import Caretaker
+from wild_cat_zoo.zoo import Zoo
 
 import unittest
 
@@ -105,7 +105,7 @@ class Tests(unittest.TestCase):
     def test_zoo_add_animal_success(self):
         z = Zoo("My Zoo", 1500, 6, 10)
         res = z.add_animal(Lion("Neo", "Male", 2), 1000)
-        self.assertEqual(res, "Neo the Lion added to the zoo")
+        self.assertEqual(res, "Neo the Lion added to the wild_cat_zoo")
         self.assertEqual(len(z.animals), 1)
         self.assertEqual(z._Zoo__budget, 500)
 
@@ -147,7 +147,7 @@ class Tests(unittest.TestCase):
     def test_zoo_fire_worker_unsuccessful(self):
         z = Zoo("Zoo", 1500, 1, 1)
         res = z.fire_worker("K")
-        self.assertEqual(res, "There is no K in the zoo")
+        self.assertEqual(res, "There is no K in the wild_cat_zoo")
         self.assertEqual(z.workers, [])
 
     def test_zoo_pay_worker_success(self):

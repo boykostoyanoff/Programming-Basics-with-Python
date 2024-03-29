@@ -1,16 +1,16 @@
-from zoo.caretaker import Caretaker
+from wild_cat_zoo.caretaker import Caretaker
 
-from zoo.cheetah import Cheetah
+from wild_cat_zoo.cheetah import Cheetah
 
-from zoo.keeper import Keeper
+from wild_cat_zoo.keeper import Keeper
 
-from zoo.lion import Lion
+from wild_cat_zoo.lion import Lion
 
-from zoo.tiger import Tiger
+from wild_cat_zoo.tiger import Tiger
 
-from zoo.vet import Vet
+from wild_cat_zoo.vet import Vet
 
-from zoo.zoo import Zoo
+from wild_cat_zoo.zoo import Zoo
 
 zoo = Zoo("Zootopia", 3000, 5, 8)
 

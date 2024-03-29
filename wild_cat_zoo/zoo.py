@@ -1,5 +1,5 @@
-from zoo.animal import Animal
-from zoo.worker import Worker
+from wild_cat_zoo.animal import Animal
+from wild_cat_zoo.worker import Worker
 
 
 class Zoo:
