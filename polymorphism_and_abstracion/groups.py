@@ -19,7 +19,7 @@ class Group:
         return len(self.people)
 
     def __add__(self, other):
-        return Group(f"{self.name} {other.name}", self.people + other.people)
+        return Group(f"{self.name} {other.owner}", self.people + other.people)
 
     def __str__(self):
         return f"Group {self.name} with members {', '.join([str(p) for p in self.people])}"

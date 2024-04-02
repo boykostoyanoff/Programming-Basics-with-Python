@@ -29,7 +29,7 @@ class Storage:
     def edit_category(self, category_id: int, new_name: str):
         category = self.find_category_by_id(category_id)
         if category:
-            category.name = new_name
+            category.owner = new_name
 
     def edit_topic(self, topic_id: int, new_topic: str, new_storage_folder: str):
         topic = self.find_topic_by_id(topic_id)

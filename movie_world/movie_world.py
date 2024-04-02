@@ -30,14 +30,14 @@ class MovieWorld:
         if not customer or not dvd:
             return
         if dvd in customer.rented_dvds:
-            return f"{customer.name} has already rented {dvd.name}"
+            return f"{customer.owner} has already rented {dvd.owner}"
         if dvd.is_rented:
             return f"DVD is already rented"
         if customer.age < dvd.age_restriction:
-            return f"{customer.name} should be at least {dvd.age_restriction} to rent this movie"
+            return f"{customer.owner} should be at least {dvd.age_restriction} to rent this movie"
         customer.rented_dvds.append(dvd)
         dvd.is_rented = True
-        return f"{customer.name} has successfully rented {dvd.name}"
+        return f"{customer.owner} has successfully rented {dvd.owner}"
 
     def return_dvd(self, customer_id: int, dvd_id: int):
         customer = self.find_customer_by_id(customer_id)
@@ -47,9 +47,9 @@ class MovieWorld:
         if dvd in customer.rented_dvds:
             dvd.is_rented = False
             customer.rented_dvds.remove(dvd)
-            return f"{customer.name} has successfully returned {dvd.name}"
+            return f"{customer.owner} has successfully returned {dvd.owner}"
         else:
-            return f"{customer.name} does not have that DVD"
+            return f"{customer.owner} does not have that DVD"
 
     def __repr__(self):
         result = ''

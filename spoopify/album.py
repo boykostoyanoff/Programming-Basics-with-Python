@@ -21,7 +21,7 @@ class Album:
         if self.published:
             return f"Cannot remove songs. Album is published."
         for song in self.songs:
-            if song.name == song_name:
+            if song.owner == song_name:
                 self.songs.remove(song)
                 return f"Removed song {song_name} from album {self.name}."
         return f"Song is not in the album."

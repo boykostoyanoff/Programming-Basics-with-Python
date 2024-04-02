@@ -14,7 +14,7 @@ class Band:
 
     def remove_album(self, album_name: str):
         for album in self.albums:
-            if album.name == album_name:
+            if album.owner == album_name:
                 if album.published:
                     return f"Album has been published. It cannot be removed."
                 self.albums.remove(album)

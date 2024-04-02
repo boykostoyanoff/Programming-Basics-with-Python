@@ -8,7 +8,7 @@ class Guild:
 
     def find_player_by_name(self, player_name: str)->Player:
         for player in self.players:
-            if player.name == player_name:
+            if player.owner == player_name:
                 return player
 
     def assign_player(self, player: Player):

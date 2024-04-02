@@ -15,7 +15,7 @@ class Team:
 
     def remove_player(self, player_name: str):
         for player in self.__players:
-            if player.name == player_name:
+            if player.owner == player_name:
                 self.__players.remove(player)
                 return player
 
