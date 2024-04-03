@@ -19,7 +19,7 @@ class Zoo:
             self.__budget -= price
             return f"{animal.name} the {animal.__class__.__name__} added to the zoo"
         else:
-            return "Not enough space for animal"
+            return "Not enough space for animals"
 
     def hire_worker(self, worker: Worker):
         if self.__workers_capacity > len(self.workers):
