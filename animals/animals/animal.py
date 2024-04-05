@@ -2,6 +2,9 @@ from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
+    FOOD_EAT = 0
+    WEIGHT_INCREASE_PER_PIECE = 0
+
     def __init__(self, name: str, weight: float):
         self.name = name
         self.weight = weight
@@ -11,9 +14,12 @@ class Animal(ABC):
     def make_sound(self):
         pass
 
-    @abstractmethod
     def feed(self, food):
-        pass
+        if type(food) in self.FOOD_EAT:
+            self.weight += food.quantity * self.WEIGHT_INCREASE_PER_PIECE
+            self.food_eaten += food.quantity
+        else:
+            return f"{self.__class__.__name__} does not eat {food.__class__.__name__}!"
 
 
 class Bird(Animal, ABC):
@@ -26,19 +32,10 @@ class Bird(Animal, ABC):
 
 
 class Mammal(Animal, ABC):
-    FOOD_EAT = 0
-    WEIGHT_INCREASE_PER_PIECE = 0
 
     def __init__(self, name, weight, living_region: str):
         super().__init__(name, weight)
         self.living_region = living_region
-
-    def feed(self, food):
-        if type(food) in self.FOOD_EAT:
-            self.weight += food.quantity * self.WEIGHT_INCREASE_PER_PIECE
-            self.food_eaten += food.quantity
-        else:
-            return f"{self.__class__.__name__} does not eat {food.__class__.__name__}!"
 
     def __repr__(self):
         return f"{self.__class__.__name__} [{self.name}, {self.weight}, {self.living_region}, {self.food_eaten}]"

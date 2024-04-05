@@ -1,22 +1,8 @@
-# first zero test
-import unittest
-from wild_farm.animals.birds import Owl, Hen
-from wild_farm.animals.mammals import Mouse, Dog, Cat, Tiger
-from wild_farm.food import Vegetable, Fruit, Meat, Seed
+from Formula_1_manager.f1_season_app import F1SeasonApp
 
+f1_season = F1SeasonApp()
 
-class WildFarmTests(unittest.TestCase):
-    def test_first_zero(self):
-        owl = Owl("Pip", 10, 10)
-        self.assertEqual(str(owl), "Owl [Pip, 10, 10, 0]")
-        meat = Meat(4)
-        self.assertEqual(owl.make_sound(), "Hoot Hoot")
-        owl.feed(meat)
-        veg = Vegetable(1)
-        owl.feed(veg)
-        self.assertEqual(owl.feed(veg), "Owl does not eat Vegetable!")
-        self.assertEqual(str(owl), "Owl [Pip, 10, 11.0, 4]")
-
-
-if __name__ == "__main__":
-    unittest.main()
+print(f1_season.register_team_for_season("Red Bull", 2000000))
+print(f1_season.register_team_for_season("Mercedes", 2500000))
+print(f1_season.new_race_results("Nurburgring", 1, 7))
+print(f1_season.new_race_results("Silverstone", 10, 1))
