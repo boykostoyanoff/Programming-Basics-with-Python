@@ -18,3 +18,15 @@ class SummitQuestManagerApp:
             return f"{climber_type} doesn't exist in our register."
         self.climbers.append(climber)
         return f"{climber_name} is successfully registered as a {climber_type}."
+
+    def peak_wish_list(self, peak_type: str, peak_name: str, peak_elevation: int):
+        pass
+
+    def check_gear(self, climber_name: str, peak_name: str, gear: list):
+        pass
+
+    def perform_climbing(self, climber_name: str, peak_name: str):
+        pass
+
+    def get_statistics (self):
+        pass
