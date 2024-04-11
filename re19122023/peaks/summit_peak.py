@@ -1,4 +1,4 @@
-from project.peaks.base_peak import BasePeak
+from re19122023.peaks.base_peak import BasePeak
 
 
 class SummitPeak(BasePeak):
