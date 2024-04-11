@@ -13,7 +13,7 @@ class BasePeak(ABC):
 
     @name.setter
     def name(self, value):
-        if value >= 2:
+        if len(value) >= 2:
             self.__name = value
         else:
             raise ValueError("Peak elevation cannot be below 1500m.")
