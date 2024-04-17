@@ -1,4 +1,4 @@
-from re19122023.peaks.base_peak import BasePeak
+from re_19_12_2023.peaks.base_peak import BasePeak
 
 
 class ArcticPeak(BasePeak):

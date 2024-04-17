@@ -1,5 +1,5 @@
-from re19122023.climbers.base_climber import BaseClimber
-from re19122023.peaks.base_peak import BasePeak
+from re_19_12_2023.climbers.base_climber import BaseClimber
+from re_19_12_2023.peaks.base_peak import BasePeak
 
 
 class SummitClimber(BaseClimber):

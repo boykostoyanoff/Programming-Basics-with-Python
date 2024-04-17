@@ -1,9 +1,9 @@
-from re19122023.climbers.arctic_climber import ArcticClimber
-from re19122023.climbers.base_climber import BaseClimber
-from re19122023.climbers.summit_climber import SummitClimber
-from re19122023.peaks.arctic_peak import ArcticPeak
-from re19122023.peaks.base_peak import BasePeak
-from re19122023.peaks.summit_peak import SummitPeak
+from re_19_12_2023.climbers.arctic_climber import ArcticClimber
+from re_19_12_2023.climbers.base_climber import BaseClimber
+from re_19_12_2023.climbers.summit_climber import SummitClimber
+from re_19_12_2023.peaks.arctic_peak import ArcticPeak
+from re_19_12_2023.peaks.base_peak import BasePeak
+from re_19_12_2023.peaks.summit_peak import SummitPeak
 
 
 class SummitQuestManagerApp:
